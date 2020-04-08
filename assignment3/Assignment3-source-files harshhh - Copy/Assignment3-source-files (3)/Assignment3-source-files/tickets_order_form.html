@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Party Tickets Order Form</title>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/main.css">
+
+        
+	</head>
+    
+	<body>
+		<!-- header starts -->
+		<header>
+			<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+			<h2>The Halloween Store</h2>
+			<h3>For the little Goblin in all of us!</h3>
+		</header>
+		
+		<!-- navigation starts -->
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="about_us.html">About Us</a>
+					<ul>						
+						<li><a href="our_history.html">Our History</a></li>
+						<li><a href="our_team.html">Our Team</a></li>
+					</ul>
+				</li>
+				<li><a href="products.html">Our Products</a></li>
+				<li><a href="tickets_order_form.html">Party Tickets</a></li>
+				<li><a href="contact_us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- main content starts -->
+		<main>
+			<!-- sidebar starts -->
+			<aside>
+				<ul>
+					<li><a href="products/props.html">Props</a></li>
+					<li><a href="products/costumes.html">Costumes</a></li>
+					<li><a href="products/special.html">Special FX</a></li>
+					<li><a href="products/masks.html">Masks</a></li>
+				</ul>
+			</aside>
+
+			<!-- the main section of the content starts -->
+			<section>
+				<h1>Buy Tickets for a Halloween Party</h1>
+				
+				<!-- the order form goes here -->
+				<form action="place_order.html" name="order_form" method="post">
+                    <fieldset id="membershipdetail">
+                    	<legend>Member Information</legend><br>
+                    	<label for="email">E-Mail:</label>
+                    	<input class="highlighted" type="email" name="email" id="email" required autofous />
+                    	<br><br>
+                    	<label for="first-name">First Name:</label>
+                    	<input class="highlighted"  type="text" name="first-name" id="first-name" required />
+                    	<br><br>
+                    	<label for="last-name">Last Name:</label>
+                    	<input class="highlighted"  type="text" name="last-name" id="last-name" required />
+                    	<br><br>
+                    	<label for="address">Address:</label>
+                    	<input class="highlighted"  type="text" name="address" id="address-name" />
+                    	<br><br>
+                    	<label for="city">City:</label>
+                    	<input class="highlighted"  type="text" name="city" id="city-name" required />
+                    	<br><br>
+                    	<label for="province">Province:</label>
+                    	<input class="highlighted"  type="text" name="province" id="province-name" maxlength="2" minlength="2" pattern="[A-Z]{2}" placeholder="2-letter code" required>
+                    	<br><br>
+                    	<label for="postal_code">Postal Code:</label>
+                    	<input class="highlighted"  type="text" name="postal-code" id="postal_code" placeholder="Must be 6 characters"
+                    	       pattern="[a-zA-Z0-9]{6}" title="Should be 6 alphanumeric characters long" required />
+                        <br><br>
+                        <label for="phone_number">Phone Number:</label>
+                        <input class="highlighted"  type="tel" name="phone_number" id="phone"  placeholder="999-999-9999"
+                               pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Should be 999-999-999 format" />
+                        <br><br>
+                    </fieldset>
+                    
+                    <fieldset id="orderdetail">
+                    	<legend>Ordering Information</legend><br>
+                    	<label for="party">Party:</label>
+                        <select id="party_info">
+                        	<option value="Fang-tastic Feast">Fang-tastic Feast</option>
+                        	<option value="Fright Night">Fright Night</option>
+                        	<option value="Ghouls' Night Out">Ghouls' Night Out</option>
+                        	<option value="Monster Mash">Monster Mash</option>
+                        </select>
+                        <br><br>
+                        <label for="order_type">Order Type:</label>
+                        <select id="order_type">
+                        	<option value="Member Package">Member Package</option>
+                        	<option value="Donor Package">Donor Package</option>
+                        	<option value="Single Tickets">Single Tickets</option>
+                        </select>
+                        <br><br>
+                        <label for="number_of_tickets">Number of Tickets:</label>
+                        <input type="tel" name="number_of_tickets" placeholder="number of single tickets">
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset id="payment_method">
+                        <legend>Payment Method</legend>
+						<label for="Credit Card">Credit Card</label>
+                        <input type="radio" name="payment_method" class="payment" required value="Credit Card" >
+						<label for="bill_me">Bill Me</label>
+                        <input type="radio" name="payment_method" class="payment" required value="Bill Me">
+
+                        
+                    </fieldset>
+                    
+                    <fieldset id="Credit_Information"><br>
+                    	<legend>Credit Card Information</legend>
+                    	<label for="Credit_Card">Card Type:</label>
+                    	<select id="Credit_Card">
+                    		<option value="Visa">Visa</option>
+                    		<option value="Master Card">Master Card</option>
+                    		<option value="Discover">Discover</option>
+                    	</select>
+                    	<br><br>
+                    	<label for="Card_Number" required >Card Number:</label>
+                    	<input type="tel" name="card_number" id="card" required maxlength="16" placeholder="16 digits"><br><br>
+                    	<label for="Expiration_date">Expiration Date:</label>
+                    	<select>
+                    		<option value="1">January</option>
+                    		<option value="2">Febuary</option>
+                    		<option value="3">March</option>
+                    		<option value="4">April</option>
+                    		<option value="5">May</option>
+                    		<option value="6">June</option>
+                    		<option value="7">July</option>
+                    		<option value="8">August</option>
+                    		<option value="9">September</option>
+                    		<option value="10">October</option>
+                    		<option value="11">November</option>
+                    		<option value="12">December</option>
+                    	</select>
+                    	<select>
+                    	    <option value="15">2015</option>
+                    	    <option value="16">2016</option>
+                    	    <option value="17">2017</option>
+                    	    <option value="18">2018</option>
+                    	    <option value="19">2019</option>
+                    	</select>     
+                    </fieldset>
+                    
+                    <fieldset id="submit_buttons">
+                    	    <legend>Submit Your Order</legend>
+                    	    <input type="submit" id="button1" value="Submit">
+                    	    
+                    	    <input type="Reset"  id="button2"  value="Reset Fields">
+                    </fieldset>	   	 	
+
+				</form>
+				
+			</section>
+		</main>
+
+		<!-- footer starts -->
+		<footer>
+			<p>&copy; 2020 Harshdeep kaur</p>
+		</footer>
+	</body>
+</html>
